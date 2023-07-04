@@ -18,8 +18,8 @@ class Store {
 
 
     static deleteStudent(studentId) {
+        console.log(studentId);
         const students = Store.getStudents();
-        
         students.forEach((student, index) => {
             if(student.studentId === studentId) {
                 students.splice(index, 1);

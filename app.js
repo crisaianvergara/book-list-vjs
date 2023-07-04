@@ -28,7 +28,6 @@ document.querySelector("#student-form").addEventListener("submit", e => {
 // Delete student
 document.querySelector('#student-list').addEventListener('click', e => {
     UI.deleteStudent(e.target);
-    Store.deleteStudent(e.target.parentElement.previousElementSibling.textContent);
-    console.log(e.target.parentElement.previousElementSibling.textContent);
+    Store.deleteStudent(e.target.parentElement.parentElement.firstElementChild.textContent);
     UI.showAlert('Removed student successfully!', 'success');
 });
